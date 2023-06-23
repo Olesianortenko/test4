@@ -125,7 +125,9 @@ color: var(--primary-text-color);
 .contacts{
 display: flex;
 margin-left: auto;
-}  
+}
+
+
 .contacts .item +.item{
 margin-left: 50px;
 }
@@ -148,6 +150,28 @@ color: var(--primary-text-color);
 color: var(--primary-text-color);
 }
 
+.contacts .item{
+cursor: pointer;
+}
+
+.contacts .item::before{
+display: inline-block;
+margin-right: 10px;
+width: 16px;
+height: 12px;
+content: '';
+background-repeat:no-repeat ;
+background-size: contain;
+}
+
+.icon-envelop::before{
+background-image: url(..//images/envelope.svg);
+}
+.icon-smartphone::before{
+background-image: url(..//images/smartphone.svg);
+}
+
+
 
 /*-----------------Герой----------------------------*/
 
@@ -158,8 +182,23 @@ padding-top: 200px;
 padding-bottom: 200px;
 padding-left: 270px;
 padding-right: 270px;
+}
 
-background-color:#2F303A;
+.overlay{
+max-width: 1600px;
+height: 600px;
+
+margin-left: auto;
+margin-right: auto;
+outline: 1px solid crimson;
+background-color: #000000;
+
+background-image: linear-gradient(
+to right,
+rgba(47, 48, 58, 0.4),
+rgba(47, 48, 58, 0.4)
+),
+url(..//images/хедер\ картинка.jpg)
 }
 
 .hero-title{
@@ -223,9 +262,34 @@ justify-content: space-between;
  width: 270px;
 }
 
+.features-list .item::before{
+display:block;
+content: "";
+height: 120px;
+
+
+background-size: 70px 70px;
+background-repeat: no-repeat;
+background-position: center;
+background-color: #F5F4FA;
+outline: 1px solid #2196F3;
+}
+
+.icon-antenna::before{
+background-image: url(..//images/antenna\ 1.svg);
+}
+.icon-clock::before{
+background-image: url(..//images/clock\ 1.svg)
+}
+.icon-diagram::before{
+background-image:url(..//images/diagram\ 1.svg)
+}
+.icon-astronaut::before{
+background-image:url(..//images/astronaut\ 1.svg)
+}
 .features-list .title{
 color: var(--primary-text-color);
-margin-top: 0;
+margin-top: 30px;
 margin-bottom: 10px;
 
 font-weight: 700;
